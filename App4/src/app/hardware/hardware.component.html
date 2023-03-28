@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="table-primary">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Memoria</th>
+                        <th>Procesador</th>
+                        <th>Disco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let listado of hardware">
+                        <td>{{listado.id}}</td>
+                        <td>{{listado.nombre}}</td>
+                        <td>{{listado.marca}}</td>
+                        <td>{{listado.modelo}}</td>
+                        <td>{{listado.memoria}}</td>
+                        <td>{{listado.procesador}}</td>
+                        <td>{{listado.disco_duro}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

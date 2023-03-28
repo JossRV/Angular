@@ -1,0 +1,45 @@
+<div>
+    <h2>Listado de Heroes</h2>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let heroe of heroes"> {{heroe}} </li>
+    </ul>
+    <ul>
+        <li *ngFor="let heroe of heroes"> {{heroes}} </li>
+    </ul>
+    <!-- <ul>
+        <li *ngFor="let heroe of heroes; as item"> {{item}} </li>
+    </ul> -->
+</div>
+<div>
+    <h2>Tabla</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.nombre}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-container *ngFor="let usuario of usuarios">
+    <div>Nombre: {{usuario.nombre}}</div>
+    <div>id: {{usuario.id}}</div>
+</ng-container>
+
+<div>
+    <h2>Directiva *ngIf edad</h2>
+    <div *ngIf="edad(10);else mensaje">
+        <p>Eres mayor de edad</p>
+    </div>
+    <ng-template #mensaje>
+        <p>Eres menor de edad</p>
+    </ng-template>
+</div>
