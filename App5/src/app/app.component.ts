@@ -30,7 +30,8 @@ export class AppComponent {
     if (this.formulario.id == null || this.formulario.nombre == null || this.formulario.precio == null) {
       return alert("Hay campos vacios, compruebe porfavor");
     }
-
+     
+    // 3. validacion de id repetido
     for (let i = 0; i < this.inventario.length; i++) {
       if (this.inventario[i].id == this.formulario.id) {
         return alert("El id de este item ya existe, porfavor escriba uno diferente");
