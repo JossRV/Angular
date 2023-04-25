@@ -1,0 +1,16 @@
+.tirar{
+    width: 5rem;
+    height: 2rem;
+    border-radius: .3rem;
+    border: 0rem;
+    background-color: black;
+    color: white;
+}
+.tirar:hover{
+    background-color: gray;
+    color: black;
+}
+.resultado{
+    font-size: 2rem;
+    font-style: italic;
+}

@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+  <app-dado [valor]="valor1"></app-dado>
+  <app-dado [valor]="valor2"></app-dado>
+  <app-dado [valor]="valor3"></app-dado>
+  <hr>
+  <button (click)="tirar()" class="tirar">Tirar</button>
+  <div *ngIf="resultado=='Gano'; else mensaje">
+    <p class="resultado" style="color: green;">{{resultado}}</p>
+  </div>
+  <ng-template #mensaje>
+    <p class="resultado" style="color: red;">{{resultado}}</p>
+  </ng-template>
+</div>
