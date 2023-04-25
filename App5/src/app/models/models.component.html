@@ -1,0 +1,54 @@
+<div class="container mt-5">
+    <div class="row mb-4 d-flex justify-content-center">
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="number" [(ngModel)]="formulario.id" class="form-control" id="floatingInput"
+                    placeholder="id">
+                <label for="floatingInput">id</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" [(ngModel)]="formulario.nombre" class="form-control" id="floatingInput"
+                    placeholder="nombre">
+                <label for="floatingInput">nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" [(ngModel)]="formulario.precio" class="form-control" id="floatingInput"
+                    placeholder="precio">
+                <label for="floatingInput">precio</label>
+            </div>
+            <div class="d-grid gap-3 col-6 mx-auto">
+                <button class="btn btn-outline-dark" (click)="agregar()">Agregar</button>
+                <button class="btn btn-outline-warning" (click)="editar()">Editar</button>
+                <button class="btn btn-outline-primary" (click)="limpiar()">Limpiar</button>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Seleccionar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let articulo of inventario">
+                        <td>{{articulo.id}}</td>
+                        <td>{{articulo.nombre}}</td>
+                        <td>{{articulo.precio}}</td>
+                        <td>
+                            <button class="btn btn-outline-primary" (click)="seleccionar(articulo)">Seleccionar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-danger" (click)="eliminar(articulo.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
