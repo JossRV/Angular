@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col"></div>
+        <div class="col-6">
+            <h2 class="text-center mb-3">Simulando un crud para inventario ropa</h2>
+            <form action="" method="post">
+                <label for="">ID</label>
+                <input type="text" class="form-control" name="id" [(ngModel)]="formulario.id">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" name="nombre" [(ngModel)]="formulario.nombre">
+                <label for="">Precio</label>
+                <input type="text" class="form-control" name="precio" [(ngModel)]="formulario.precio">
+                <div class="d-grid gap-2 col-6 mx-auto mt-3 mb-3">
+                    <button class="btn btn-outline-dark" (click)="agregar()">Agregar</button>
+                    <button class="btn btn-outline-warning" (click)="actualizar()">Editar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="table-info">
+                    <tr>
+                        <td>ID</td>
+                        <td>Nombre</td>
+                        <td>Precio</td>
+                        <td>Eliminar</td>
+                        <td>Seleccionar</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let articulo of inventario">
+                        <td>{{articulo.id}}</td>
+                        <td>{{articulo.nombre}}</td>
+                        <td>{{articulo.precio}}</td>
+                        <td>
+                            <button class="btn btn-outline-danger" (click)="eliminar(articulo.id)">Eliminar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-info" (click)="seleccionar(articulo)">Seleccionar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

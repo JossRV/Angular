@@ -1,0 +1,13 @@
+<!-- prueba del cronometro, usando el selector cronometro 
+    y a la vez asignando un valor a la directavia input llamado inicio  -->
+<!-- tambien se llamo el evento multiplo10 que se creo con el EventEmitter -->
+<div style="text-align: center;">
+    <h1>Prueba del componente cronometro</h1>
+    <!-- dentro del evento se llamo el metodo actualizar que se creo en app de ts 
+        asignandole los parametros definidos del evento -->
+    <!-- la variable definida es $event puesto que lo crea el EventEmitter, 
+        si se quiere utilizar otra variable no te lo permitira -->
+    <app-cronometro [inicio]="5" (multiplo10)="actualizar($event)"></app-cronometro>
+    <h2>Evento</h2>
+    <h3>{{mensaje}}</h3>
+</div>
