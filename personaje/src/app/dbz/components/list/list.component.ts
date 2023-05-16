@@ -12,8 +12,8 @@ export class ListComponent {
   
   public personajeList: Personaje[] = [
     {
-      nombre: 'Vegeta',
-      poder: 40000
+      nombre: '',
+      poder: 0
     }
   ];
 }
