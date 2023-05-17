@@ -69,9 +69,9 @@ export class NgCrudComponent {
         for (let i = 0; i < this.inventario.length; i++) {
           if (this.inventario[i].id == id) {
             this.inventario[i].id = this.formulario.id;
-            this.formulario[i].nombre = this.formulario.nombre;
+            // this.formulario[i].nombre = this.formulario.nombre;
             this.formulario[i].precio = this.formulario.precio;
-            this.limpiar();
+            // this.limpiar();
             return alert('Actualizado con exito')
           }
         }

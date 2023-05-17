@@ -1,0 +1,15 @@
+<form (ngSubmit)="guardar()">
+    <label for="">id</label>
+    <input type="number" class="form-control mb-3" name="id" [(ngModel)]="transporteAdd[0].id">
+    <label for="">costo</label>
+    <input type="number" class="form-control mb-3" name="costo" [(ngModel)]="transporteAdd[0].costo">
+    <label for="">Tipo</label>
+    <input type="text" class="form-control mb-3" name="tipo" [(ngModel)]="transporteAdd[0].tipo">
+    <label for="">Partida</label>
+    <input type="text" class="form-control mb-3" name="partida" [(ngModel)]="transporteAdd[0].partida">
+    <label for="">Destino</label>
+    <input type="text" class="form-control mb-3" name="destino" [(ngModel)]="transporteAdd[0].destino">
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-outline-dark">Guardar</button>
+    </div>
+</form>
